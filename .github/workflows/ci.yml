@@ -3,7 +3,7 @@ name: Realse Version
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   releaseGithub:

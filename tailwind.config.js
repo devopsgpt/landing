@@ -17,7 +17,10 @@ export default {
         'header-circle': "url(\"/images/Planet.png\")",
         "vignette-radial": "radial-gradient(50% 50% at 80%, #320D37 0%, #0D0316 80%)",
         'services-text': "linear-gradient(to bottom, #49235F 0%, #D387FF 100%)",
-        'accent-light-linear-1': "linear-gradient(180deg, rgba(211, 135, 255, 0) 0%, rgba(211, 135, 255, 0.05) 100%)"
+        'accent-light-linear-1': "linear-gradient(180deg, rgba(211, 135, 255, 0) 0%, rgba(211, 135, 255, 0.05) 100%)",
+      },
+      backgroundColor: {
+        'normal': "#0D0316"
       },
       colors: {
         "accent": "#D387FF",

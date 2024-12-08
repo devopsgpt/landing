@@ -16,7 +16,7 @@ const VisualTour: FC = () => {
         </p>
       </div>
       <div className="mb-14 flex w-full items-center justify-center gap-4">
-        <img src="/images/basic.png" className="rounded-2xl" width={768} />
+        <img src="/images/basic.png" className="rounded-2xl" width={1000} />
         <p className="text-xl font-semibold text-accent">
           You can ask any question related to DevOps tools and receive an
           answer.
@@ -27,7 +27,7 @@ const VisualTour: FC = () => {
           You can simply provide your inputs and click "Generate" to create your
           template.
         </p>
-        <img src="/images/ansible.png" className="rounded-2xl" width={768} />
+        <img src="/images/ansible.png" className="rounded-2xl" width={1000} />
       </div>
     </section>
   );

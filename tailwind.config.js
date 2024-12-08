@@ -10,12 +10,12 @@ export default {
         DMSans: ['DM Sans', 'sans-serif']
       },
       backgroundImage: {
-        "background-radial": "radial-gradient(circle, #320D37 15%, #0D0316 100%)",
+        "background-radial": "radial-gradient(circle, #320D37 15%, #0D0316 60%)",
         "Linear": "linear-gradient(to right, #D387FF, rgba(211, 135, 255, 0))",
         'accent-linear': 'linear-gradient(to bottom, #49235F 0%, #D387FF 100%)',
         'accent-linear-2': 'linear-gradient(180deg, rgba(211, 135, 255, 0) 0%, rgba(211, 135, 255, 0.2) 100%)',
         'header-circle': "url(\"/images/Planet.png\")",
-        "vignette-radial": "radial-gradient(circle, #320D37 0%, #0D0316 80%)",
+        "vignette-radial": "radial-gradient(50% 50% at 80%, #320D37 0%, #0D0316 80%)",
         'services-text': "linear-gradient(to bottom, #49235F 0%, #D387FF 100%)",
         'accent-light-linear-1': "linear-gradient(180deg, rgba(211, 135, 255, 0) 0%, rgba(211, 135, 255, 0.05) 100%)"
       },

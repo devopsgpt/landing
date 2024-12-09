@@ -11,6 +11,10 @@
     font-style: 'normal';
   }
 
+  html {
+    @apply scroll-smooth;
+  }
+
   body {
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {

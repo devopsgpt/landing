@@ -2,39 +2,39 @@ import { FC } from 'react';
 
 const Services: FC = () => {
   return (
-    <section className="bg-vignette-radial pb-40 pt-40">
-      <div className="flex flex-col items-center justify-center">
-        <p className="rounded-3xl border border-gray-500 bg-accent/10 px-6 py-1 text-accent">
-          Services
-        </p>
-        <h2 className="bg-services-text mt-10 w-1/2 bg-clip-text text-center text-[64px] font-semibold leading-tight text-transparent">
-          An AI-powered assistant that simplifies DevOps tasks
-        </h2>
-        <p className="text-accent-dark mb-24 mt-4 w-1/4 text-center">
-          Your one-stop platform for DevOps problem-solving, infrastructure
-          templates, and seamless automation setup.
-        </p>
-      </div>
+    <section id="our-services" className="bg-vignette-radial py-14 md:py-24">
       <div className="container mx-auto max-w-6xl">
+        <div className="mx-auto flex max-w-4xl flex-col items-center justify-center">
+          <p className="rounded-3xl border border-gray-500 bg-accent/10 px-6 py-1 text-accent">
+            Services
+          </p>
+          <h2 className="mt-10 bg-services-text bg-clip-text text-center text-5xl font-semibold leading-tight text-transparent md:text-[64px] lg:w-full">
+            An AI-powered assistant that simplifies DevOps tasks
+          </h2>
+          <p className="mb-24 mt-4 w-1/2 text-center text-accent-dark">
+            Your one-stop platform for DevOps problem-solving, infrastructure
+            templates, and seamless automation setup.
+          </p>
+        </div>
         <div className="grid grid-cols-2 gap-5">
           <div className="col-span-2">
-            <div className="h-[400px] w-full rounded-3xl border border-gray-400 bg-gray-100 bg-opacity-10 bg-clip-padding p-10 backdrop-blur-3xl backdrop-filter">
-              <div className="flex h-full justify-between">
+            <div className="w-full rounded-3xl border border-gray-400 bg-gray-100 bg-opacity-10 bg-clip-padding p-10 backdrop-blur-3xl backdrop-filter md:h-[400px]">
+              <div className="flex h-full flex-col justify-between md:flex-row">
                 <div className="flex flex-col justify-between">
-                  <div className="bg-accent-light-linear-1 drop-shadow-service-shape flex h-16 w-16 items-center justify-center rounded-2xl border border-gray-500">
+                  <div className="mb-12 flex h-16 w-16 items-center justify-center rounded-2xl border border-gray-500 bg-accent-light-linear-1 drop-shadow-service-shape md:mb-0">
                     <img src="/images/shape-1.png" />
                   </div>
-                  <div>
-                    <h3 className="bg-services-text mb-4 bg-clip-text text-4xl font-semibold text-transparent">
+                  <div className="mb-4 md:mb-0">
+                    <h3 className="mb-4 bg-services-text bg-clip-text text-4xl font-semibold text-transparent">
                       DevOps Chatbot
                     </h3>
-                    <p className="text-accent-dark w-1/2">
+                    <p className="w-full text-accent-dark md:w-1/2">
                       Get instant answers to all your DevOps questions, from
                       CI/CD pipelines to infrastructure issues. Just ask!
                     </p>
                   </div>
                 </div>
-                <div className="flex h-[320px] w-[320px] items-center justify-center rounded-3xl border border-gray-400 bg-clip-padding p-10 backdrop-blur-2xl backdrop-filter">
+                <div className="flex h-[320px] w-full items-center justify-center rounded-3xl border border-gray-400 bg-clip-padding p-10 backdrop-blur-2xl backdrop-filter md:w-[320px]">
                   <img
                     src="/images/shape-2.png"
                     className="animate-spin-slow"
@@ -43,10 +43,10 @@ const Services: FC = () => {
               </div>
             </div>
           </div>
-          <div className="h-[568px] w-full rounded-3xl border border-gray-400 bg-gray-100 bg-opacity-10 bg-clip-padding p-10 backdrop-blur-3xl backdrop-filter">
-            <div className="flex h-full flex-col justify-between">
+          <div className="col-span-2 h-full w-full rounded-3xl border border-gray-400 bg-gray-100 bg-opacity-10 bg-clip-padding p-10 backdrop-blur-3xl backdrop-filter md:h-[568px] lg:col-span-1">
+            <div className="flex h-full flex-col justify-between gap-6 md:gap-0">
               <div className="space-y-4">
-                <h4 className="bg-services-text mb-4 bg-clip-text text-4xl font-semibold text-transparent">
+                <h4 className="mb-4 bg-services-text bg-clip-text text-4xl font-semibold text-transparent">
                   Code Templates
                 </h4>
                 <p className="text-accent-dark">
@@ -60,10 +60,10 @@ const Services: FC = () => {
               </div>
             </div>
           </div>
-          <div className="h-[568px] w-full rounded-3xl border border-gray-400 bg-gray-100 bg-opacity-10 bg-clip-padding p-10 backdrop-blur-3xl backdrop-filter">
-            <div className="flex h-full flex-col justify-between">
+          <div className="col-span-2 h-[568px] w-full rounded-3xl border border-gray-400 bg-gray-100 bg-opacity-10 bg-clip-padding p-10 backdrop-blur-3xl backdrop-filter lg:col-span-1">
+            <div className="flex h-full flex-col justify-between gap-6 md:gap-0">
               <div className="space-y-4">
-                <h4 className="bg-services-text mb-4 bg-clip-text text-4xl font-semibold text-transparent">
+                <h4 className="mb-4 bg-services-text bg-clip-text text-4xl font-semibold text-transparent">
                   Installation Automation
                 </h4>
                 <p className="text-accent-dark">

@@ -60,7 +60,7 @@ const Services: FC = () => {
               </div>
             </div>
           </div>
-          <div className="col-span-2 h-[568px] w-full rounded-3xl border border-gray-400 bg-gray-100 bg-opacity-10 bg-clip-padding p-10 backdrop-blur-3xl backdrop-filter lg:col-span-1">
+          <div className="col-span-2 h-full w-full rounded-3xl border border-gray-400 bg-gray-100 bg-opacity-10 bg-clip-padding p-10 backdrop-blur-3xl backdrop-filter md:h-[568px] lg:col-span-1">
             <div className="flex h-full flex-col justify-between gap-6 md:gap-0">
               <div className="space-y-4">
                 <h4 className="mb-4 bg-services-text bg-clip-text text-4xl font-semibold text-transparent">

@@ -7,6 +7,8 @@ on:
       - dev
     paths-ignore:
       - 'README.md'
+      - 'Dockerfile'
+      - 'nginx/**'
       - '.github/**'
 
 jobs:

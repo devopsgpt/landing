@@ -1,6 +1,8 @@
+'use client';
+
 import { FC } from 'react';
 
-const Header: FC = () => {
+export const Header: FC = () => {
   return (
     <section className="relative h-dvh overflow-hidden bg-background-radial">
       <div className="flex h-full flex-col items-center justify-center">
@@ -32,5 +34,3 @@ const Header: FC = () => {
     </section>
   );
 };
-
-export default Header;

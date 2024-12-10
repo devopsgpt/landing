@@ -1,6 +1,9 @@
+'use client';
+
+import Image from 'next/image';
 import { FC } from 'react';
 
-const Services: FC = () => {
+export const Services: FC = () => {
   return (
     <section id="our-services" className="bg-vignette-radial py-14 md:py-24">
       <div className="container mx-auto max-w-6xl">
@@ -22,7 +25,12 @@ const Services: FC = () => {
               <div className="flex h-full flex-col justify-between md:flex-row">
                 <div className="flex flex-col justify-between">
                   <div className="mb-12 flex h-16 w-16 items-center justify-center rounded-2xl border border-gray-500 bg-accent-light-linear-1 drop-shadow-service-shape md:mb-0">
-                    <img src="/images/shape-1.png" />
+                    <Image
+                      src="/images/shape-1.png"
+                      alt="shape"
+                      width={28}
+                      height={28}
+                    />
                   </div>
                   <div className="mb-4 md:mb-0">
                     <h3 className="mb-4 bg-services-text bg-clip-text text-4xl font-semibold text-transparent">
@@ -35,9 +43,12 @@ const Services: FC = () => {
                   </div>
                 </div>
                 <div className="flex h-[320px] w-full items-center justify-center rounded-3xl border border-gray-400 bg-clip-padding p-10 backdrop-blur-2xl backdrop-filter md:w-[320px]">
-                  <img
+                  <Image
+                    width={280}
+                    height={280}
                     src="/images/shape-2.png"
                     className="animate-spin-slow"
+                    alt="shape"
                   />
                 </div>
               </div>
@@ -56,7 +67,12 @@ const Services: FC = () => {
                 </p>
               </div>
               <div className="flex h-[320px] w-full items-center justify-center rounded-3xl border border-gray-400 bg-clip-padding p-10 backdrop-blur-2xl backdrop-filter">
-                <img src="/images/shape-3.png" />
+                <Image
+                  width={280}
+                  height={280}
+                  src="/images/shape-3.png"
+                  alt="shape"
+                />
               </div>
             </div>
           </div>
@@ -74,7 +90,12 @@ const Services: FC = () => {
                 </p>
               </div>
               <div className="flex h-[320px] w-full items-center justify-center rounded-3xl border border-gray-400 bg-clip-padding p-10 backdrop-blur-2xl backdrop-filter">
-                <img src="/images/shape-4.png" />
+                <Image
+                  width={280}
+                  height={280}
+                  src="/images/shape-4.png"
+                  alt="shape"
+                />
               </div>
             </div>
           </div>
@@ -83,5 +104,3 @@ const Services: FC = () => {
     </section>
   );
 };
-
-export default Services;

@@ -1,8 +1,8 @@
 import { FC } from 'react';
 
-const Footer: FC = () => {
+export const Footer: FC = () => {
   return (
-    <footer className="bg-normal text-accent-dark h-[100px] py-1 text-center">
+    <footer className="h-[100px] bg-normal py-1 text-center text-accent-dark">
       <div className="mx-auto h-0.5 w-1/2 bg-gray-800"></div>
       <div className="flex h-full w-full items-center justify-center text-center">
         <p className="accent-accent-dark">
@@ -13,5 +13,3 @@ const Footer: FC = () => {
     </footer>
   );
 };
-
-export default Footer;

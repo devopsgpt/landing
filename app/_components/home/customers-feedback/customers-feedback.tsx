@@ -1,6 +1,8 @@
+'use client';
+
 import { FC } from 'react';
 
-const CustomerFeedback: FC = () => {
+export const CustomerFeedback: FC = () => {
   return (
     <section className="flex flex-col items-center justify-center bg-vignette-radial py-10 md:py-10">
       <div className="h-[66px]">
@@ -15,35 +17,36 @@ const CustomerFeedback: FC = () => {
           <div className="w-full border border-gray-200/10 p-10">
             <div className="flex items-center justify-center">
               <p className="italic text-accent-dark">
-                "This platform saved us countless hours with its ready-to-use
-                Terraform templates and real-time troubleshooting assistance."
+                &quot;This platform saved us countless hours with its
+                ready-to-use Terraform templates and real-time troubleshooting
+                assistance.&quot;
               </p>
             </div>
           </div>
           <div className="w-full border border-gray-200/10 p-10">
             <div className="flex items-center justify-center">
               <p className="italic text-accent-dark">
-                "The chatbot has streamlined our DevOps operations
+                &quot;The chatbot has streamlined our DevOps operations
                 significantly. It provides instant answers to
-                infrastructure-related queries, saving countless hours."
+                infrastructure-related queries, saving countless hours.&quot;
               </p>
             </div>
           </div>
           <div className="w-full border border-gray-200/10 p-10">
             <div className="flex items-center justify-center">
               <p className="italic text-accent-dark">
-                "Using Terraform templates from the platform, we set up a
+                &quot;Using Terraform templates from the platform, we set up a
                 complex infrastructure in no time. The templates are
-                well-organized and easy to adapt."
+                well-organized and easy to adapt.&quot;
               </p>
             </div>
           </div>
           <div className="w-full border border-gray-200/10 p-10">
             <div className="flex items-center justify-center">
               <p className="italic text-accent-dark">
-                "Jenkins' integration has made our CI/CD process incredibly
-                smooth. The step-by-step guides from the platform helped us
-                onboard quickly."
+                &quot;Jenkin&apos;s integration has made our CI/CD process
+                incredibly smooth. The step-by-step guides from the platform
+                helped us onboard quickly.&quot;
               </p>
             </div>
           </div>
@@ -63,5 +66,3 @@ const CustomerFeedback: FC = () => {
     </section>
   );
 };
-
-export default CustomerFeedback;

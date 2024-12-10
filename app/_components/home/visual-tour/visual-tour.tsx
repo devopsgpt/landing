@@ -1,6 +1,9 @@
+'use client';
+
+import Image from 'next/image';
 import { FC } from 'react';
 
-const VisualTour: FC = () => {
+export const VisualTour: FC = () => {
   return (
     <section className="bg-vignette-radial py-8 md:py-16">
       <div className="container mx-auto mb-10 w-full px-3 lg:mb-24">
@@ -18,7 +21,13 @@ const VisualTour: FC = () => {
         </div>
       </div>
       <div className="mb-14 grid w-full grid-cols-1 items-center justify-center gap-4 px-8 lg:grid-cols-2">
-        <img src="/images/basic.png" className="w-full max-w-5xl rounded-2xl" />
+        <Image
+          width={1270}
+          height={835}
+          src="/images/basic.png"
+          className="w-full max-w-5xl rounded-2xl"
+          alt="basic"
+        />
         <p className="text-center text-xl font-semibold text-accent">
           You can ask any question related to DevOps tools and receive an
           answer.
@@ -26,16 +35,17 @@ const VisualTour: FC = () => {
       </div>
       <div className="mb-14 grid w-full grid-cols-1 items-center justify-center gap-4 px-8 lg:grid-cols-2">
         <p className="order-2 text-center text-xl font-semibold text-accent lg:order-1">
-          You can simply provide your inputs and click "Generate" to create your
-          template.
+          You can simply provide your inputs and click &quot;Generate&quot; to
+          create your template.
         </p>
-        <img
+        <Image
+          width={1268}
+          height={830}
           src="/images/ansible.png"
           className="order-1 w-full max-w-5xl rounded-2xl lg:order-2"
+          alt="ansible"
         />
       </div>
     </section>
   );
 };
-
-export default VisualTour;

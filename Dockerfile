@@ -10,5 +10,5 @@ WORKDIR /usr/share/nginx/html
 RUN rm -rf ./*
 COPY --from=builder /app/dist ./
 COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
-EXPOSE 4173
+EXPOSE 3000
 CMD ["nginx", "-g", "daemon off;"]

@@ -68,7 +68,7 @@ jobs:
         username: ${{ secrets.HOST_USERNAME }}
         password: ${{ secrets.HOST_PASSWORD }}
         port: ${{ secrets.HOST_PORT }}
-        script: docker compose -f docker-compose-landing.yml down landing_prod && docker compose -f docker-compose-landing.yml up -d --pull always landing_prod
+        script: docker compose -f devopsgpt-landing/docker-compose-landing.yml down landing_prod && docker compose -f devopsgpt-landing/docker-compose-landing.yml up -d --pull always landing_prod
 
     - name: Deploying landing dev on the remote server
       if: github.ref == 'refs/heads/dev'
@@ -78,5 +78,5 @@ jobs:
         username: ${{ secrets.HOST_USERNAME }}
         password: ${{ secrets.HOST_PASSWORD }}
         port: ${{ secrets.HOST_PORT }}
-        script: docker compose -f docker-compose-landing.yml down landing_dev && docker compose -f docker-compose-landing.yml up -d --pull always landing_dev
+        script: docker compose -f devopsgpt-landing/docker-compose-landing.yml down landing_dev && docker compose -f devopsgpt-landing/docker-compose-landing.yml up -d --pull always landing_dev
 

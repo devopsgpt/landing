@@ -80,3 +80,12 @@ jobs:
         port: ${{ secrets.HOST_PORT }}
         script: docker compose -f devopsgpt-landing/docker-compose-landing.yml down landing_dev && docker compose -f devopsgpt-landing/docker-compose-landing.yml up -d --pull always landing_dev
 
+    - name: Removing dangle images on the remote server
+      uses: appleboy/ssh-action@v1.2.0
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.HOST_USERNAME }}
+        password: ${{ secrets.HOST_PASSWORD }}
+        port: ${{ secrets.HOST_PORT }}
+        script: docker image prune -f 
+

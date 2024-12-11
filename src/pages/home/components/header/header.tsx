@@ -2,8 +2,15 @@ import { FC } from 'react';
 
 const Header: FC = () => {
   return (
-    <section className="relative h-dvh overflow-hidden bg-background-radial">
-      <div className="flex h-full flex-col items-center justify-center">
+    <section className="relative overflow-hidden h-dvh bg-background-radial">
+      <a
+        href="https://panel.hobs.ai"
+        target="_blank"
+        className="absolute px-6 py-1 text-sm text-white -translate-x-1/2 border left-1/2 top-8 rounded-3xl"
+      >
+        Sign In
+      </a>
+      <div className="flex flex-col items-center justify-center h-full">
         <div className="flex h-[66px] items-center justify-center gap-6">
           <div className="h-0.5 w-[88px] rotate-180 bg-Linear" />
           <p className="text-sm text-accent">Devops Solutions</p>
@@ -13,7 +20,7 @@ const Header: FC = () => {
           Devops GPT
         </h1>
         <div className="flex h-[78px] items-center justify-center">
-          <p className="text-center text-lg text-accent">
+          <p className="text-lg text-center text-accent">
             From Setup to Scale, We’ve Got You Covered
           </p>
         </div>

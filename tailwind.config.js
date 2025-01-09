@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        DMSans: ['DM Sans', 'sans-serif']
+        DMSans: ['DM-Sans', 'sans-serif']
       },
       backgroundImage: {
         "background-radial": "radial-gradient(circle, #320D37 15%, #0D0316 60%)",

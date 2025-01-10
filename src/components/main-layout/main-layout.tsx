@@ -4,9 +4,9 @@ import { Footer } from '../';
 
 export const MainLayout: FC = () => {
   return (
-    <>
+    <div>
       <Outlet />
       <Footer />
-    </>
+    </div>
   );
 };

@@ -1,13 +1,11 @@
-import { transform } from 'typescript';
-
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: ["class"],
-  content: ["./src/**/*.{html,js,ts,tsx,jsx}"],
+  content: ["./src/**/*.{html,js,ts,tsx,jsx,css}"],
   theme: {
     extend: {
       fontFamily: {
-        DMSans: ['DM Sans', 'sans-serif']
+        DMSans: ['DM-Sans', 'sans-serif']
       },
       backgroundImage: {
         "background-radial": "radial-gradient(circle, #320D37 15%, #0D0316 60%)",
@@ -37,6 +35,8 @@ export default {
       },
     }
   },
-  plugins: [require("tailwind-scrollbar")],
+  plugins: [
+    require('tailwind-scrollbar')({ nocompatible: true }),
+  ],
 }
 

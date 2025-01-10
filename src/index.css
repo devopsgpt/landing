@@ -1,7 +1,4 @@
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @layer base {
   @font-face {
     font-family: 'DM-Sans';
@@ -13,9 +10,21 @@
 
   html {
     @apply scroll-smooth font-DMSans;
+    ::-webkit-scrollbar {
+      @apply h-1 w-1;
+    }
+
+    ::-webkit-scrollbar-track {
+      @apply bg-black;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      @apply rounded-full bg-accent;
+    }
   }
 
   body {
+    overflow: overlay;
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
       -webkit-appearance: none;
@@ -28,3 +37,6 @@
     }
   }
 }
+
+@tailwind components;
+@tailwind utilities;

@@ -1,9 +1,7 @@
-import { transform } from 'typescript';
-
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: ["class"],
-  content: ["./src/**/*.{html,js,ts,tsx,jsx}"],
+  content: ["./src/**/*.{html,js,ts,tsx,jsx,css}"],
   theme: {
     extend: {
       fontFamily: {
@@ -37,6 +35,8 @@ export default {
       },
     }
   },
-  plugins: [require("tailwind-scrollbar")],
+  plugins: [
+    require('tailwind-scrollbar')({ nocompatible: true }),
+  ],
 }
 

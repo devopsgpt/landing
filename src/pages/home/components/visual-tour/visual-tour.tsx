@@ -18,10 +18,9 @@ const VisualTour: FC = () => {
         </div>
       </div>
       <div className="mb-14 grid w-full grid-cols-1 items-center justify-center gap-4 px-8 lg:grid-cols-2">
-        <img src="/images/basic.png" className="w-full max-w-5xl rounded-2xl" />
+        <img src="/images/ui-1.png" className="w-full max-w-5xl rounded-2xl" />
         <p className="text-center text-xl font-semibold text-accent">
-          You can ask any question related to DevOps tools and receive an
-          answer.
+          You can choose the type of template you need to generate.
         </p>
       </div>
       <div className="mb-14 grid w-full grid-cols-1 items-center justify-center gap-4 px-8 lg:grid-cols-2">
@@ -30,7 +29,7 @@ const VisualTour: FC = () => {
           template.
         </p>
         <img
-          src="/images/ansible.png"
+          src="/images/ui-2.png"
           className="order-1 w-full max-w-5xl rounded-2xl lg:order-2"
         />
       </div>

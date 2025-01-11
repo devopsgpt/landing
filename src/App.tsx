@@ -1,5 +1,5 @@
 import { Route, Routes, useLocation } from 'react-router';
-import { Home } from './pages';
+import { Home, TOS } from './pages';
 import { MainLayout } from './components';
 
 function App() {
@@ -9,6 +9,8 @@ function App() {
     <Routes location={location}>
       <Route element={<MainLayout />}>
         <Route path="/" element={<Home />} />
+        <Route path="/tos" element={<TOS />} />
+        <Route path="*" element={<Home />} />
       </Route>
     </Routes>
   );

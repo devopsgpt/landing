@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 export const ContactUs: FC = () => {
   return (
-    <section id="about-us" className="overflow-x-hidden">
+    <section id="contact-us" className="overflow-x-hidden">
       <div className="relative z-20 flex h-full w-full items-center justify-center bg-about-us py-10">
         <div className="absolute z-[2] h-full w-full xl:bg-corner"></div>
         <div className="absolute z-[1] flex h-full w-full max-w-[900px]">
@@ -23,11 +23,14 @@ export const ContactUs: FC = () => {
             <div className="absolute bottom-0 w-full border border-stroke" />
             <div className="container relative z-30 mx-auto w-full max-w-[900px] p-10">
               <p className="mb-7 text-3xl leading-normal text-accent-dark">
-                We’re here to help! If you have any questions, feedback, or need
-                support, feel free to reach out to us using the{' '}
+                We're here to assist with any questions, feedback, or support
+                needs—just email us at{' '}
                 <a href="mailto:info@hobs.ai" className="text-accent underline">
                   info@hobs.ai
                 </a>
+                . For partnerships, collaborations, or enterprise solutions,
+                reach out at the same address. Let's work together to create
+                smarter DevOps solutions!
               </p>
               <p className="mb-5 text-3xl leading-normal text-accent-dark">
                 Follow us on social media to stay updated on the latest news,
@@ -42,13 +45,6 @@ export const ContactUs: FC = () => {
                   LinkedIn
                 </a>
               </div>
-              <p className="mb-5 text-3xl leading-normal text-accent-dark">
-                Also for partnerships, collaborations, or enterprise solutions,
-                email us at{' '}
-                <a href="mailto:info@hobs.ai" className="text-accent underline">
-                  info@hobs.ai
-                </a>
-              </p>
               <p className="mb-5 text-3xl leading-normal text-accent-dark">
                 We’d love to hear from you! Let’s build smarter DevOps solutions
                 together.

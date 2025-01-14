@@ -5,6 +5,7 @@ import CustomerFeedback from './components/customer-feedback/CustomerFeedback';
 import VisualTour from './components/visual-tour/visual-tour';
 import { AboutUs } from './components/about-us/about-us';
 import { useLocation } from 'react-router';
+import { ContactUs } from './components/contact-us/contact-us';
 
 const Home: FC = () => {
   const { hash } = useLocation();
@@ -25,6 +26,7 @@ const Home: FC = () => {
       <VisualTour />
       <AboutUs />
       <CustomerFeedback />
+      <ContactUs />
     </Suspense>
   );
 };

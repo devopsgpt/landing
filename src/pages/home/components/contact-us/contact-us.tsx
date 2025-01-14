@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 export const ContactUs: FC = () => {
   return (
-    <section id="about-us" className="overflow-x-hidden">
+    <section id="contact-us" className="overflow-x-hidden">
       <div className="relative z-20 flex h-full w-full items-center justify-center bg-about-us py-10">
         <div className="absolute z-[2] h-full w-full xl:bg-corner"></div>
         <div className="absolute z-[1] flex h-full w-full max-w-[900px]">

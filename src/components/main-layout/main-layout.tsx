@@ -30,7 +30,7 @@ export const MainLayout: FC = () => {
       <button
         ref={menuBtnRef}
         onClick={() => setMenu(!menu)}
-        className="absolute right-4 top-4 z-20"
+        className="absolute right-4 top-4 z-30"
       >
         <Menu stroke="#fff" />
       </button>

@@ -30,13 +30,13 @@ export const MainLayout: FC = () => {
       <button
         ref={menuBtnRef}
         onClick={() => setMenu(!menu)}
-        className="absolute right-4 top-4 z-30"
+        className="fixed right-4 top-4 z-30"
       >
         <Menu stroke="#fff" />
       </button>
       <div
         className={cn(
-          'invisible absolute right-4 top-12 z-50 w-full max-w-56 rounded-lg border-gray-800 bg-gray-400/10 bg-clip-padding opacity-0 backdrop-blur-lg backdrop-contrast-100 backdrop-saturate-100 backdrop-filter transition-all',
+          'invisible fixed right-4 top-12 z-50 w-full max-w-56 rounded-lg border-gray-800 bg-gray-400/10 bg-clip-padding opacity-0 backdrop-blur-lg backdrop-contrast-100 backdrop-saturate-100 backdrop-filter transition-all',
           {
             'visible opacity-100': menu,
           },

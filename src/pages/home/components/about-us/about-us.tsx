@@ -1,10 +1,15 @@
-import { FC } from 'react';
+import { FC, useContext } from 'react';
+import { ScrollContext, ScrollContextType } from '../../../../contexts';
 
 export const AboutUs: FC = () => {
+  const scrollContext = useContext<ScrollContextType | undefined>(
+    ScrollContext,
+  );
+
   return (
-    <section id="about-us" className="overflow-x-hidden">
-      <div className="bg-about-us relative z-20 flex h-full w-full items-center justify-center">
-        <div className="xl:bg-corner absolute z-[2] h-full w-full"></div>
+    <section ref={scrollContext!.aboutUsRef} className="overflow-x-hidden">
+      <div className="relative z-20 flex h-full w-full items-center justify-center bg-about-us">
+        <div className="absolute z-[2] h-full w-full xl:bg-corner"></div>
         <div className="absolute z-[1] flex h-full w-full max-w-[900px]">
           <div className="h-full w-full border-x border-stroke"></div>
         </div>

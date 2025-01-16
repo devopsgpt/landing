@@ -1,8 +1,13 @@
-import { FC } from 'react';
+import { FC, useContext } from 'react';
+import { ScrollContext, ScrollContextType } from '../../../../contexts';
 
 export const ContactUs: FC = () => {
+  const scrollContext = useContext<ScrollContextType | undefined>(
+    ScrollContext,
+  );
+
   return (
-    <section id="contact-us" className="overflow-x-hidden">
+    <section ref={scrollContext?.contactUsRef} className="overflow-x-hidden">
       <div className="relative z-20 flex h-full w-full items-center justify-center bg-about-us py-10">
         <div className="absolute z-[2] h-full w-full xl:bg-corner"></div>
         <div className="absolute z-[1] flex h-full w-full max-w-[900px]">

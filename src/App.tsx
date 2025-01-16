@@ -1,9 +1,14 @@
 import { Route, Routes, useLocation } from 'react-router';
 import { Home, TOS } from './pages';
 import { MainLayout } from './components';
+import { useEffect } from 'react';
 
 function App() {
   const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, [location.pathname]);
 
   return (
     <Routes location={location}>

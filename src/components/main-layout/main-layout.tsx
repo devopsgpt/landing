@@ -1,12 +1,24 @@
-import { FC, useEffect, useRef, useState } from 'react';
-import { Link, Outlet } from 'react-router';
+import {
+  FC,
+  MouseEvent as ME,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
+import { Link, Outlet, useNavigate } from 'react-router';
 import { Footer } from '../';
 import { cn } from '../../lib/utils';
 import { Menu } from 'lucide-react';
+import { ScrollContext, ScrollContextType } from '../../contexts';
 
 export const MainLayout: FC = () => {
   const [menu, setMenu] = useState(false);
   const menuBtnRef = useRef<HTMLButtonElement>(null);
+  const scrollContext = useContext<ScrollContextType | undefined>(
+    ScrollContext,
+  );
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
@@ -24,6 +36,18 @@ export const MainLayout: FC = () => {
       document.removeEventListener('click', handleClickOutside);
     };
   }, []);
+
+  const handleClick = (e: ME, section: 'about-us' | 'contact-us') => {
+    e.preventDefault();
+    navigate('/');
+    setTimeout(() => {
+      if (section === 'about-us') {
+        scrollContext!.scrollToAboutUs();
+      } else if (section === 'contact-us') {
+        scrollContext!.scrollToContactUs();
+      }
+    }, 100);
+  };
 
   return (
     <>
@@ -49,18 +73,25 @@ export const MainLayout: FC = () => {
         >
           Sign In
         </a>
-        <Link to="/" className="block p-2 py-3 text-center text-white">
-          Home
-        </Link>
-        <Link to="/#about-us" className="block p-2 py-3 text-center text-white">
-          About Us
-        </Link>
         <Link
-          to="/#contact-us"
+          to="/"
+          onClick={() => window.scrollTo({ top: 0 })}
           className="block p-2 py-3 text-center text-white"
         >
-          Contact Us
+          Home
         </Link>
+        <button
+          onClick={(e) => handleClick(e, 'about-us')}
+          className="block w-full p-2 py-3 text-center text-white"
+        >
+          About Us
+        </button>
+        <button
+          onClick={(e) => handleClick(e, 'contact-us')}
+          className="block w-full p-2 py-3 text-center text-white"
+        >
+          Contact Us
+        </button>
       </div>
       <Outlet />
       <Footer />

@@ -62,7 +62,7 @@ jobs:
         tags: |
           ${{ secrets.DOCKER_USERNAME }}/devopsgpt-landing:${{ github.ref_name }}
 
-    - name: Deploying landing prod on the remote server
+    - name: Deploying landing on production server
       if: github.ref == 'refs/heads/master'
       uses: appleboy/ssh-action@v1.2.0
       with:
@@ -72,7 +72,7 @@ jobs:
         port: ${{ secrets.HOST_PORT }}
         script: docker compose -f devopsgpt-landing/docker-compose-landing.yml down landing_prod && docker compose -f devopsgpt-landing/docker-compose-landing.yml up -d --pull always landing_prod
 
-    - name: Deploying landing dev on the remote server
+    - name: Deploying landing on dev server
       if: github.ref == 'refs/heads/dev'
       uses: appleboy/ssh-action@v1.2.0
       with:
@@ -82,12 +82,21 @@ jobs:
         port: ${{ secrets.HOST_PORT }}
         script: docker compose -f devopsgpt-landing/docker-compose-landing.yml down landing_dev && docker compose -f devopsgpt-landing/docker-compose-landing.yml up -d --pull always landing_dev
 
-    - name: Removing dangle images on the remote server
+    - name: Removing dangle images on production server
       uses: appleboy/ssh-action@v1.2.0
       with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.HOST_USERNAME }}
-        password: ${{ secrets.HOST_PASSWORD }}
+        host: ${{ secrets.HOST_PROD }}
+        username: ${{ secrets.HOST_USERNAME_PROD }}
+        password: ${{ secrets.HOST_PASSWORD_PROD }}
+        port: ${{ secrets.HOST_PORT }}
+        script: docker image prune -f
+
+    - name: Removing dangle images on dev server
+      uses: appleboy/ssh-action@v1.2.0
+      with:
+        host: ${{ secrets.HOST_DEV }}
+        username: ${{ secrets.HOST_USERNAME_DEV }}
+        password: ${{ secrets.HOST_PASSWORD_DEV }}
         port: ${{ secrets.HOST_PORT }}
         script: docker image prune -f 
 

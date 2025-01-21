@@ -83,6 +83,7 @@ jobs:
         script: docker compose -f devopsgpt-landing/docker-compose-landing.yml down landing_dev && docker compose -f devopsgpt-landing/docker-compose-landing.yml up -d --pull always landing_dev
 
     - name: Removing dangle images on production server
+      if: github.ref == 'refs/heads/master'
       uses: appleboy/ssh-action@v1.2.0
       with:
         host: ${{ secrets.HOST_PROD }}
@@ -92,6 +93,7 @@ jobs:
         script: docker image prune -f
 
     - name: Removing dangle images on dev server
+      if: github.ref == 'refs/heads/dev'
       uses: appleboy/ssh-action@v1.2.0
       with:
         host: ${{ secrets.HOST_DEV }}

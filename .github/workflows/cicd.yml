@@ -66,9 +66,9 @@ jobs:
       if: github.ref == 'refs/heads/master'
       uses: appleboy/ssh-action@v1.2.0
       with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.HOST_USERNAME }}
-        password: ${{ secrets.HOST_PASSWORD }}
+        host: ${{ secrets.HOST_PROD }}
+        username: ${{ secrets.HOST_USERNAME_PROD }}
+        password: ${{ secrets.HOST_PASSWORD_PROD }}
         port: ${{ secrets.HOST_PORT }}
         script: docker compose -f devopsgpt-landing/docker-compose-landing.yml down landing_prod && docker compose -f devopsgpt-landing/docker-compose-landing.yml up -d --pull always landing_prod
 
@@ -76,9 +76,9 @@ jobs:
       if: github.ref == 'refs/heads/dev'
       uses: appleboy/ssh-action@v1.2.0
       with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.HOST_USERNAME }}
-        password: ${{ secrets.HOST_PASSWORD }}
+        host: ${{ secrets.HOST_DEV }}
+        username: ${{ secrets.HOST_USERNAME_DEV }}
+        password: ${{ secrets.HOST_PASSWORD_DEV }}
         port: ${{ secrets.HOST_PORT }}
         script: docker compose -f devopsgpt-landing/docker-compose-landing.yml down landing_dev && docker compose -f devopsgpt-landing/docker-compose-landing.yml up -d --pull always landing_dev
 

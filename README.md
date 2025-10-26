@@ -1,51 +1,93 @@
-# React + TypeScript + Vite
+# Hobs.ai Landing Page
 
+A beautiful, responsive landing page for Hobs.ai - AI-powered DevOps solutions. Built with Next.js 15, React, TypeScript, Tailwind CSS, and Framer Motion.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
 
-Currently, two official plugins are available:
+- 🚀 **Next.js 15** - Modern React framework with App Router
+- 🎨 **Tailwind CSS** - Utility-first CSS framework
+- 🌓 **Dark/Light Theme** - Toggle between themes
+- ✨ **Framer Motion** - Smooth animations and transitions
+- 📱 **Fully Responsive** - Mobile-first design
+- ♿ **Accessible** - WCAG compliant
+- 🔍 **SEO Optimized** - Sitemap and robots.txt included
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Getting Started
 
-## Expanding the ESLint configuration
+### Prerequisites
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Node.js 18+
+- npm or yarn
 
-- Configure the top-level `parserOptions` property like this:
+### Installation
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+1. Install dependencies:
+
+```bash
+npm install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. Run the development server:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+npm run dev
 ```
+
+3. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Build for Production
+
+```bash
+npm run build
+npm start
+```
+
+## Project Structure
+
+```
+src/
+├── app/                    # Next.js app router
+│   ├── layout.tsx         # Root layout
+│   ├── page.tsx           # Home page
+│   ├── tos/               # Terms of Service page
+│   ├── globals.css        # Global styles
+│   ├── sitemap.ts         # Sitemap generator
+│   └── robots.ts          # Robots.txt generator
+├── components/            # React components
+│   ├── home/              # Home page components
+│   │   ├── header.tsx
+│   │   ├── services.tsx
+│   │   ├── visual-tour.tsx
+│   │   ├── about-us.tsx
+│   │   ├── customer-feedback.tsx
+│   │   └── contact-us.tsx
+│   ├── footer.tsx
+│   ├── theme-provider.tsx
+│   └── theme-toggle.tsx
+└── lib/                   # Utility functions
+    └── utils.ts
+```
+
+## Key Technologies
+
+- **Next.js 15** - React framework
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Styling
+- **Framer Motion** - Animations
+- **next-themes** - Theme management
+- **Lucide React** - Icons
+
+## Deployment
+
+The easiest way to deploy is using [Vercel](https://vercel.com):
+
+```bash
+npm i -g vercel
+vercel
+```
+
+Or use any other hosting platform that supports Next.js.
+
+## License
+
+MIT

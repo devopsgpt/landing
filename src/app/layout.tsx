@@ -7,6 +7,7 @@ const dmSans = DM_Sans({
   subsets: ['latin'],
   variable: '--font-dm-sans',
   display: 'swap',
+  fallback: ['system-ui', 'arial'],
 });
 
 export const metadata: Metadata = {

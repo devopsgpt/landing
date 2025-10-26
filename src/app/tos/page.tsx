@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 
+export const runtime = 'edge';
+
 export const metadata: Metadata = {
   title: "Terms of Service - Hobs.ai",
   description: "Terms of Service and Privacy Policy for Hobs.ai",

@@ -79,12 +79,27 @@ src/
 
 ## Deployment
 
+### Deploy to Vercel
+
 The easiest way to deploy is using [Vercel](https://vercel.com):
 
 ```bash
 npm i -g vercel
 vercel
 ```
+
+### Deploy to Cloudflare Pages
+
+To deploy to Cloudflare Pages:
+
+1. Push your code to GitHub/GitLab/Bitbucket
+2. Connect your repository to Cloudflare Pages
+3. Use the following build settings:
+   - **Build command**: `npm run build`
+   - **Build output directory**: `.next`
+   - **Node.js version**: 18 or higher
+
+The project is configured with edge runtime for optimal Cloudflare Pages deployment.
 
 Or use any other hosting platform that supports Next.js.
 
